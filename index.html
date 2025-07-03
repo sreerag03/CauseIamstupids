@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Something for You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: #80deea;
+            color: #004d40;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4dd0e1;
+        }
+
+        #message {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #00695c;
+            display: none;
+        }
+
+        video {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video src="20250703_2002_Charming Apology Dance_simple_compose_01jz8b79dvefxbfw9yjcgx5we4.mp4" controls autoplay muted loop></video>
+        <h1>Just wanted to share a little something...</h1>
+        <p>Hope this brightens your day a bit.</p>
+        <button id="revealBtn">Click Me</button>
+        <div id="message">Hoping the movie and evening was as great and beautiful like you.</div>
+    </div>
+
+    <script>
+        document.getElementById('revealBtn').addEventListener('click', function() {
+            document.getElementById('message').style.display = 'block';
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
